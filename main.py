@@ -16,7 +16,7 @@ def get_pred():
   endpoint = 'fixtures?league=4&season=2020&next=3'
   url = f"https://api-football-v1.p.rapidapi.com/v3/{endpoint}"
   headers = {
-      'x-rapidapi-key': "7978e9dfbcmshd5d625a9364151ap14be8bjsnf0c87e3fe937",
+      'x-rapidapi-key': os.environ['rapidapi-key'],
       'x-rapidapi-host': "api-football-v1.p.rapidapi.com"
       }
 
