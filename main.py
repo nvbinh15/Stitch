@@ -13,7 +13,7 @@ def get_joke():
 
 
 def get_pred():
-  endpoint = 'fixtures?league=4&season=2020&next=3'
+  endpoint = 'fixtures?league=4&season=2020&next=2'
   url = f"https://api-football-v1.p.rapidapi.com/v3/{endpoint}"
   headers = {
       'x-rapidapi-key': os.environ['rapidapi-key'],
@@ -40,18 +40,11 @@ def get_pred():
     if pred_response['predictions']['winner']['name']:
           pred += ('Predicted winner: ' + pred_response['predictions']['winner']['name'] + '\n')
 
-      
     pred += ('Advice: ' + pred_response['predictions']['advice'] + '\n')
-
-    # pred += ('Percent: ' + pred_response['teams']['home']['name'] + ' wins: ' + pred_response['predictions']['percent']['home'] + '; '
-    #                       + pred_response['teams']['away']['name'] + ' wins: ' + pred_response['predictions']['percent']['away'] + '; '
-    #                       + 'draw: ' + pred_response['predictions']['percent']['draw']
-    #                       + '\n')
     
     pred_list.append(pred)
 
   return pred_list
-
 
 
 @client.event
