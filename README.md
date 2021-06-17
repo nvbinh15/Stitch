@@ -9,9 +9,10 @@ to add Stitch to your server.
 If not, sign up for a new Discord account. If you are using desktop, click on the plus sign on the left hand side of the screen to create a new server, and add Stitch to the server as mentioned above.
 
 Commands:
-  $help - list all available commands of Stitch
-  $joke - tell random joke
-  $bet - predict the result of the next 3 games of Euro 2020
+* $help - list all available commands of Stitch
+* $joke - tell random joke
+* $bet - predict the result of the next 3 games of Euro 2020
+  
 
 ## Deployment
 Stitch is hosted on [Replit](https://replit.com/), and monitored by [UptimeBot](https://uptimerobot.com/)
