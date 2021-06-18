@@ -10,9 +10,9 @@ If not, sign up for a new [Discord](https://discord.com/) account. If you are us
 
 Commands:
 * $help - list all available commands of Stitch
-* $joke - tell a random joke
-* $bet - predict the result of the next 2 games of Euro 2020
-* $cat - tell a random cat fact
+* $joke - tell a random joke :smiley:
+* $bet - predict the result of the next 2 games of Euro 2020 :bar_chart:
+* $cat - tell a random cat fact :scream_cat:
   
 
 ## Deployment

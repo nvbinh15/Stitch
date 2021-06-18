@@ -68,7 +68,7 @@ async def on_message(message):
   if message.content.startswith('$joke'):
     joke = get_joke()
     # await message.channel.send('This is a ' + joke['type'] + ' joke')
-    await message.channel.send(joke['setup'])
+    await message.channel.send(joke['setup'] + ' :face_with_raised_eyebrow:')
     await message.channel.send('||' + joke['punchline'] + '||')
 
   if message.content.startswith('$bet'):
