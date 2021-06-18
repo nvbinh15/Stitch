@@ -10,9 +10,10 @@ If not, sign up for a new [Discord](https://discord.com/) account. If you are us
 
 Commands:
 * $help - list all available commands of Stitch
-* $joke - tell random joke
-* $bet - predict the result of the next 3 games of Euro 2020
+* $joke - tell a random joke
+* $bet - predict the result of the next 2 games of Euro 2020
+* $cat - tell a random cat fact
   
 
 ## Deployment
-Stitch is hosted on [Replit](https://replit.com/), and monitored by [UptimeBot](https://uptimerobot.com/).
+Stitch is hosted on [Replit](https://replit.com/) and monitored by [UptimeBot](https://uptimerobot.com/).

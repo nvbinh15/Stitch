@@ -46,11 +46,19 @@ def get_pred():
 
   return pred_list
 
+def get_cat_fact():
+  url = 'https://catfact.ninja/fact'
+
+  response = requests.request("GET", url)
+  response = json.loads(response.text)
+  cat_fact = response['fact']
+
+  return cat_fact
 
 @client.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(client))
-  await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='$joke $bet $help'))
+  await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='$help'))
 
 @client.event
 async def on_message(message):
@@ -74,9 +82,14 @@ async def on_message(message):
 
   if message.content.startswith('$help'):
     await message.channel.send("Hi! I'm Stitch")
-    await message.channel.send('You can type $joke for jokes :black_joker:')
-    await message.channel.send('or type $bet for Euro predictions :soccer:')
+    await message.channel.send('You can type ')
+    await message.channel.send('$bet for Euro predictions :soccer:')
+    await message.channel.send('$cat for random cat facts :cat2: ')
+    await message.channel.send('$joke for random jokes :black_joker:')
 
+  if message.content.startswith('$cat'):
+    cat_fact = get_cat_fact()
+    await message.channel.send(cat_fact + ' :smirk_cat: ')
 
 keep_alive()
 client.run(os.environ['Token'])
