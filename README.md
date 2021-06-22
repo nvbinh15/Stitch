@@ -13,6 +13,8 @@ Commands:
 * $joke - tell a random joke :smiley:
 * $bet - predict the result of the next 2 games of Euro 2020 :bar_chart:
 * $cat - tell a random cat fact :scream_cat:
+* $crypto for information about cryptocurrencies :moneybag:
+
   
 
 ## Deployment
