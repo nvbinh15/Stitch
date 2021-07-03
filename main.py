@@ -76,8 +76,9 @@ async def on_message(message):
     
     data = get_coin(id)
 
-    for line in data:
-      await message.channel.send(line)
+    # for line in data:
+    #   await message.channel.send(line)
+    await message.channel.send(embed=data)
     
 keep_alive()
 client.run(os.environ['Token'])

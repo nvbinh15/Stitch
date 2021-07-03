@@ -9,11 +9,11 @@ to add Stitch to your server.
 If not, sign up for a new [Discord](https://discord.com/) account. If you are using a desktop, click on the plus sign on the left hand side of the screen to create a new server, and add Stitch to the server as mentioned above. If you are using the mobile app, you can see the plus sign by navigating to the menu bar.
 
 Commands:
-* $help - list all available commands of Stitch
-* $joke - tell a random joke :smiley:
-* $bet - predict the result of the next 2 games of Euro 2020 :bar_chart:
-* $cat - tell a random cat fact :scream_cat:
-* $crypto - provide information about cryptocurrencies :moneybag:
+* `$help` - list all available commands of Stitch
+* `$joke` - tell a random joke :smiley:
+* `$bet` - predict the result of the next 2 games of Euro 2020 :bar_chart:
+* `$cat` - tell a random cat fact :scream_cat:
+* `$crypto` - provide information about cryptocurrencies :moneybag:
 
   
 

@@ -1,6 +1,8 @@
 import os
 import requests
 import json
+import discord
+import random
 
 def get_joke():
   response = requests.get('https://official-joke-api.appspot.com/random_joke')
@@ -62,12 +64,22 @@ def get_coin(id):
 
   result = json.loads(response.text)
 
-  data = []
+  # data = []
 
-  data.append('--- ' + result['data']['coin']['name'] + ' (' + result['data']['coin']['symbol'] + ') ---\n') 
-  data.append('Price: ' + '${:,.2f}'.format(float(result['data']['coin']['price'])) + ' USD\n') 
-  data.append('Market cap: ' + '${:,.2f}'.format(float(result['data']['coin']['marketCap'])) + ' USD\n') 
-  data.append('Rank: ' + str(result['data']['coin']['rank']) + '\n') 
-  data.append('All time high: ' + '${:,.2f}'.format(float(result['data']['coin']['allTimeHigh']['price'])) + ' USD\n') 
+  # data.append('--- ' + result['data']['coin']['name'] + ' (' + result['data']['coin']['symbol'] + ') ---\n') 
+  # data.append('Price: ' + '${:,.2f}'.format(float(result['data']['coin']['price'])) + ' USD\n') 
+  # data.append('Market cap: ' + '${:,.2f}'.format(float(result['data']['coin']['marketCap'])) + ' USD\n') 
+  # data.append('Rank: ' + str(result['data']['coin']['rank']) + '\n') 
+  # data.append('All time high: ' + '${:,.2f}'.format(float(result['data']['coin']['allTimeHigh']['price'])) + ' USD\n') 
 
-  return data
+  embedVar = discord.Embed(title=result['data']['coin']['name'] + ' (' + result['data']['coin']['symbol'] + ')', color=0xd9d9d9)
+
+  embedVar.add_field(name="Price", value='${:,.2f}'.format(float(result['data']['coin']['price'])) + ' USD', inline=True)
+
+  embedVar.add_field(name="Market cap", value='${:,.2f}'.format(float(result['data']['coin']['marketCap'])) + ' USD', inline=True)
+
+  embedVar.add_field(name="Rank", value=str(result['data']['coin']['rank']), inline=True)
+
+  embedVar.add_field(name="All time high", value='${:,.2f}'.format(float(result['data']['coin']['allTimeHigh']['price'])) + ' USD', inline=True)
+
+  return embedVar
