@@ -40,12 +40,9 @@ async def on_message(message):
 
   # Help
   if message.content.startswith('$help'):
-    await message.channel.send("Hi! I'm Stitch")
-    await message.channel.send('You can type ')
-    await message.channel.send('$bet for Euro predictions :soccer:')
-    await message.channel.send('$cat for random cat facts :cat2: ')
-    await message.channel.send('$joke for random jokes :black_joker:')
-    await message.channel.send('$crypto for information about cryptocurrencies :coin:')
+    msg = "Hi! I'm Stitch\n" + "You can type\n" + '> `$bet` for Euro predictions :soccer:\n' + '> `$cat` for random cat facts :cat2: \n' + '> `$<name of crypto>` for information about cryptocurrences :coin: \n' +'> `$crypto` for supported cryptos :moneybag:'
+
+    await message.channel.send(msg)
 
   # Cat Fact
   if message.content.startswith('$cat'):
@@ -54,31 +51,33 @@ async def on_message(message):
   
   if message.content.startswith('$crypto'):
     await message.channel.send(":coin: Type one of the following symbol for information about the respective crypto currency")
-    await message.channel.send("BTC\nETH\nBNB\nDOGE\nXRP\nLTC\nEOS\nBCH")
+    await message.channel.send("> BTC\n> ETH\n> BNB\n> DOGE\n> XRP\n> LTC\n> EOS\n> BCH")
 
-    msg = await client.wait_for('message')
-    msg = msg.content.lower()
-    id = 1 # set BTC as default
-    if msg == 'eth':
-      id = 2
-    elif msg == 'bnb':
-      id = 14
-    elif msg == 'doge':
-      id = 20
-    elif msg == 'xrp':
-      id = 3
-    elif msg == 'bch':
-      id = 4
-    elif msg == 'ltc':
-      id = 7
-    elif msg == 'eos':
-      id = 5
+  # cryptos = ['btc', 'eth', 'bnb', 'doge', 'xrp', 'ltc', 'eos', 'bch']
+  cryptos = ['btc', 'eth', 'bnb', 'doge', 'xrp', 'ltc', 'eos', 'bch']
+
+  for msg in cryptos:
+    if message.content.lower().startswith('$' + msg):
+
+      id = 1 # set BTC as default
+      if msg == 'eth':
+        id = 2
+      elif msg == 'bnb':
+        id = 14
+      elif msg == 'doge':
+        id = 20
+      elif msg == 'xrp':
+        id = 3
+      elif msg == 'bch':
+        id = 4
+      elif msg == 'ltc':
+        id = 7
+      elif msg == 'eos':
+        id = 5
     
-    data = get_coin(id)
+      data = get_coin(id)
 
-    # for line in data:
-    #   await message.channel.send(line)
-    await message.channel.send(embed=data)
+      await message.channel.send(embed=data)
     
 keep_alive()
 client.run(os.environ['Token'])

@@ -13,7 +13,8 @@ Commands:
 * `$joke` - tell a random joke :smiley:
 * `$bet` - predict the result of the next 2 games of Euro 2020 :bar_chart:
 * `$cat` - tell a random cat fact :scream_cat:
-* `$crypto` - provide information about cryptocurrencies :moneybag:
+* `$<name of crypto>` - information about cryptocurrences :chart_with_downwards_trend: 
+* `$crypto` - list all supported cryptos :moneybag:
 
   
 

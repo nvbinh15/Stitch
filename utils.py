@@ -82,4 +82,9 @@ def get_coin(id):
 
   embedVar.add_field(name="All time high", value='${:,.2f}'.format(float(result['data']['coin']['allTimeHigh']['price'])) + ' USD', inline=True)
 
+  embedVar.add_field(name="Website", value=result['data']['coin']['websiteUrl'], inline=True)
+
+  embedVar.set_thumbnail(url=result['data']['coin']['iconUrl'][:-3] + 'png')
+  # embedVar.set_thumbnail(url="https://cdn.coinranking.com/B1N19L_dZ/bnb.png")
+
   return embedVar
