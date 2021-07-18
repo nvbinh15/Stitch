@@ -26,21 +26,23 @@ async def on_message(message):
 
   # Euro Predictions
   if message.content.startswith('$bet'):
-    await message.channel.send('Let me think :thinking:')
-    try:
-      pred_list = get_pred()
-      await message.channel.send('These are my predictions:')
-      await message.channel.send('---')
-      for pred in pred_list:
-        await message.channel.send(pred)
-        await message.channel.send('---')
-    except:
-      await message.channel.send('Something went wrong.')
-      await message.channel.send('Please try again later.')
+    # await message.channel.send('Let me think :thinking:')
+    # try:
+    #   pred_list = get_pred()
+    #   await message.channel.send('These are my predictions:')
+    #   await message.channel.send('---')
+    #   for pred in pred_list:
+    #     await message.channel.send(pred)
+    #     await message.channel.send('---')
+    # except:
+    #   await message.channel.send('Something went wrong.')
+    #   await message.channel.send('Please try again later.')
+    await message.channel.send("Euro 2020 is over, please wait for further updates.\nYou can type `$help` for other commands.")
+
 
   # Help
   if message.content.startswith('$help'):
-    msg = "Hi! I'm Stitch\n" + "You can type\n" + '> `$bet` for Euro predictions :soccer:\n' + '> `$cat` for random cat facts :cat2: \n' + '> `$<name of crypto>` for information about cryptocurrences :coin: \n' +'> `$crypto` for supported cryptos :moneybag:'
+    msg = "Hi! I'm Stitch\n" + '> `$cat` for random cat facts :cat2: \n' + '> `$<name of crypto>` for information about cryptocurrences :coin: \n' +'> `$crypto` for supported cryptos :moneybag:'
 
     await message.channel.send(msg)
 
@@ -50,7 +52,7 @@ async def on_message(message):
     await message.channel.send(cat_fact + ' :smirk_cat: ')
   
   if message.content.startswith('$crypto'):
-    await message.channel.send(":coin: Type one of the following symbol for information about the respective crypto currency")
+    await message.channel.send(":coin: Supported cryptos:")
     await message.channel.send("> BTC\n> ETH\n> BNB\n> DOGE\n> XRP\n> LTC\n> EOS\n> BCH")
 
   # cryptos = ['btc', 'eth', 'bnb', 'doge', 'xrp', 'ltc', 'eos', 'bch']

@@ -11,7 +11,7 @@ If not, sign up for a new [Discord](https://discord.com/) account. If you are us
 Commands:
 * `$help` - list all available commands of Stitch
 * `$joke` - tell a random joke :smiley:
-* `$bet` - predict the result of the next 2 games of Euro 2020 :bar_chart:
+<!-- * `$bet` - predict the result of the next 2 games of Euro 2020 :bar_chart: -->
 * `$cat` - tell a random cat fact :scream_cat:
 * `$<name of crypto>` - information about cryptocurrences :chart_with_downwards_trend: 
 * `$crypto` - list all supported cryptos :moneybag:
